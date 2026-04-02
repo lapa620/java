@@ -10,12 +10,10 @@ public class Binario {
 				   [1]-decimal para binario
 				   [2]-Sair
 				-----------------------------
-			
 				""";
         ArrayList<Integer> Binarios = new ArrayList<>();
         int op = 0;
         while(op != 2){
-            System.out.println(" ");
         System.out.println(menu);
         Scanner sc = new Scanner(System.in);
         op =sc.nextInt();
@@ -31,6 +29,5 @@ public class Binario {
                 int tamanho = Binarios.size();
                 System.out.print("O seu numero em Binario é: ");
                 for(int i = tamanho - 1;i !=-1; i--) {
-
-                    System.out.print(Binarios.get(i)); }
+                    System.out.print("\n"+Binarios.get(i)); }
         }}}}
