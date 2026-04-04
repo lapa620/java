@@ -37,7 +37,7 @@ public class rpgTextual {
 			opl = sc.nextInt();
 			switch(opl) {
 			case 1: 
-				hpInimigo = hpInimigo - atkPlayer ;
+				hpInimigo = atk(atkPlayer,hpInimigo) ;
 				System.out.println(" voce deu "+atkPlayer +" de dano");
 				if (hpInimigo < 0) {
 					hpInimigo = 0;
@@ -66,13 +66,11 @@ public class rpgTextual {
 		//voce foi para direita
 		else {System.out.println("voce foi para direita");
 		System.out.println("você não encontra nada alem de uma largatixa fofa");
-			
-			
 		}
-		
-		
-		
+	}
+	
+	public static int atk(int atkPlayer, int hpInimigo) {
+		return hpInimigo - atkPlayer;
 		
 	}
-
 }
