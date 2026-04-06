@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class codificador {
 
     public static void main(String[] args) {
-
-        ArrayList<Integer> Binarios = new ArrayList<>();
+        ArrayList<Integer> codigo = new ArrayList<>();
         char[] letras = "xyzabcdefghijklmnopqrstuvw".toCharArray();
         Scanner sc = new Scanner(System.in);
         int op = 0;
@@ -22,8 +21,7 @@ public class codificador {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    Binarios.clear(); // limpa a lista
-
+                    codigo.clear(); // limpa a lista
                     System.out.println("escolha uma palavra para criptografar");
                     String palavra = sc.next();
 
@@ -31,22 +29,23 @@ public class codificador {
                          //para comparar as letras com o alfabeto
                         for(int j = 0; j < letras.length; j++) {
                             if (palavra.charAt(i) == letras[j]) {
-                                Binarios.add(j + 1);
+                                codigo.add(j);
                             }}}
-                    System.out.println(Binarios);
+                    System.out.println(codigo);
                     break;
                 case 2:
-                    System.out.println("Ainda não foi feito");
+                    for(int i = 0; i < codigo.size(); i++) {
+                        int num = codigo.get(i);
+                        System.out.print(letras[num]);
+                    }
+                    System.out.println();
                     break;
-
                 case 3:
                     System.out.println("Saindo...");
                     break;
-
                 default:
                     System.out.println("Opção inválida");
             }
-
             System.out.println();
         }
 
