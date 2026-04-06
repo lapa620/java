@@ -27,7 +27,8 @@ public class codificador {
                     System.out.println("escolha uma palavra para criptografar");
                     String palavra = sc.next();
 
-                    for(int i = 0; i < palavra.length(); i++) {
+                    for(int i = 0; i < palavra.length(); i++) {//para percorrer cada letra da palavra
+                         //para comparar as letras com o alfabeto
                         for(int j = 0; j < letras.length; j++) {
                             if (palavra.charAt(i) == letras[j]) {
                                 Binarios.add(j + 1);
