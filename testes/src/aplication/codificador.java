@@ -46,7 +46,7 @@ public class codificador {
                         System.out.println();
                         break;
                             case 2:
-                            System.out.print("em processo...")
+                            System.out.print("em processo...");
                                 break;
 
                         }break;
